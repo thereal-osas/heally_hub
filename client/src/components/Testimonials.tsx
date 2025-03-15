@@ -1,12 +1,39 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 import { testimonials } from "../data";
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  // Swipe gestures for mobile
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
+  });
+
+  // Keyboard navigation for desktop
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+    };
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, []);
+
   return (
-    <section className="py-8 md:py-16">
+    <section className="py-8 md:py-16" {...handlers}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
           Student Spotlight
@@ -19,8 +46,11 @@ const Testimonials = () => {
           {/* Mobile View: Single Card */}
           <div className="md:hidden">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              key={currentSlide}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
               className="bg-blue-600 text-white p-6 rounded-lg mx-auto max-w-sm"
             >
               <img
