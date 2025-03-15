@@ -49,44 +49,44 @@ export const testimonials = [
   {
     name: "Adhvika",
     text: "I struggled to stay engaged with traditional learning methods, but this platform completely changed my experience. The interactive lessons, real-world projects, and personalized learning paths made studying not only easier but also enjoyable.",
-    image: "/src/assets/images/img3.png",
+    image: "/images/img3.png",
   },
   {
     name: "Emily",
     text: "I now feel more confident in my skills and ready to take on new challenges. Highly recommend if you're looking to learn effectively!",
-    image: "/src/assets/images/img1.png",
+    image: "/images/img1.png",
   },
   {
     name: "Becky",
     text: "Learning with Handy has been a game-changer for me! The interactive lessons and personalized study plans helped me grasp complex topics with ease.",
-    image: "/src/assets/images/img2.png",
+    image: "/images/img2.png",
   },
 ];
 
 export const affiliations = [
   {
     name: "University of North Carolina",
-    logo: "/src/assets/images/aff1.png",
+    logo: "/images/aff1.png",
   },
   {
     name: "Dartmouth",
-    logo: "/src/assets/images/aff2.png",
+    logo: "/images/aff2.png",
   },
   {
     name: "Microsoft",
-    logo: "/src/assets/images/aff3.png",
+    logo: "/images/aff3.png",
   },
   {
     name: "Nvidia",
-    logo: "/src/assets/images/aff4.png",
+    logo: "/images/aff4.png",
   },
   {
     name: "Harvard Business School",
-    logo: "/src/assets/images/aff5.png",
+    logo: "/images/aff5.png",
   },
   {
     name: "Cornell University",
-    logo: "/src/assets/images/aff6.png",
+    logo: "/images/aff6.png",
   },
 ];
 

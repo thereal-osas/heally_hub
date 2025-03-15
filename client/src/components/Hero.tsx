@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import heroImage from "../assets/images/hero-image.png";
+import heroImage from "/images/hero-image.png";
 import Button from "./Button";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 h-[100vh]">
       <div className="grid md:grid-cols-2 gap-8 items-center -mt-6">
         {/* Left Content */}
         <motion.div

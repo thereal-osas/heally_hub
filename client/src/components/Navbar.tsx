@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/images/logo1.svg";
+import logo from "/images/logo1.svg";
 import Button from "./Button";
 
 const Navbar = () => {

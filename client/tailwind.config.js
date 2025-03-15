@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "blue-gradient": "url('src/assets/images/blueBg.jpg')",
+        "blue-gradient": "url('/images/blueBg.jpg')",
       },
     },
   },
